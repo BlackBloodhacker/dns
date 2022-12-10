@@ -83,8 +83,8 @@ echo "Gathering Response"
         for x in $(cat alive.txt)
 do
         NAME=$(echo $x | awk -F/ '{print $3}')
-        curl -X GET -H "X-Forwarded-For: darkside.com" $x -I > "headers/$NAME" 
-        curl -s -X GET -H "X-Forwarded-For: darkside.com" -L $x > "responsebody/$NAME"
+        curl -X GET -H "X-Forwarded-For: evil.com" $x -I > "headers/$NAME" 
+        curl -s -X GET -H "X-Forwarded-For: evil.com" -L $x > "responsebody/$NAME"
 done
 }
 
